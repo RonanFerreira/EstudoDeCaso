@@ -1,0 +1,59 @@
+@startuml
+left to right direction
+
+actor Cliente as c
+actor Transportadora as Transp
+actor DepartamentoDeVendas as DPVendas
+actor Industria as I
+actor EncarregadoDeProdução as Prod 
+actor EncarregadoDeAlmoxarifado as Almox  
+actor DepartamentoDeCompras as DPcompras
+actor SetorDeRecebimento as DPrecebimento
+actor DepartamentoFinanceiro as DPfinanceiro
+
+
+package Sistema {
+    usecase "Efetuar pagamento" as UC3
+    usecase "Preencher ordem de pedido com tipo e quantidade de concreto" as UC4
+    usecase "Escalona a ordem" as UC6
+    usecase "Encaminha para o encarregado de produção" as UC7
+    usecase "Executa o pedido" as UC8
+    usecase "Emitir ordem de compra" as UC9
+    usecase "Solicita materiais" as UC10
+    usecase "Entrega materiais" as UC11
+    usecase "Providenciar pedido da mercadoria" as UC12
+    usecase "Confere o recebimento" as UC13
+    usecase "Recebe o pagamento" as UC16
+    usecase "Entrega o produto" as UC17
+}
+
+c -- UC4
+DPVendas -- UC6
+DPVendas -- UC7
+Prod -- UC8
+
+Prod -- UC10
+Almox -- UC11
+Prod -- UC9
+DPcompras -- UC12
+DPrecebimento -- UC13
+Transp -- UC17
+c -- UC3
+DPfinanceiro -- UC16
+UC8 .> UC9 : <<extends>>
+UC9 .> UC10 : <<extends>>
+UC10 .> UC11
+UC11 .> UC12
+UC12 .> UC13
+UC13 .> UC16
+UC7 .> UC8
+UC3 .> UC4 : <<extends>>
+UC4 .> UC17
+UC17 .> UC7
+
+
+
+
+(UC6) .> (UC7) : <<extends>>
+
+@enduml

@@ -1,0 +1,7 @@
+Requisitos Funcionais:
+
+R1 - Registrar ordens de pedido do cliente armazenando o tipo e quantidade de concreto
+
+R3 - Registrar ordem de pedidos e encaminhamento para cada setor responsável
+
+R4 - Registrar e efetuar pagamento realizado pelo cliente

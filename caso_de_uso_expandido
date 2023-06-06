@@ -1,0 +1,62 @@
+Caso de Uso Expandido: Efetuar pagamento (UC3)
+
+Ator(es): Cliente (c), Departamento Financeiro (DPfinanceiro)
+
+Descrição:
+Este caso de uso descreve o processo do cliente realizar o pagamento pelo seu pedido.
+
+Pré-condições:
+
+O cliente selecionou os produtos desejados e as quantidades.
+Os detalhes do pedido estão precisos e completos.
+Fluxo Básico:
+
+O cliente inicia o processo de pagamento.
+O sistema apresenta ao cliente as opções de pagamento disponíveis.
+O cliente seleciona um método de pagamento preferido.
+O sistema solicita ao cliente que forneça as informações de pagamento necessárias.
+O cliente fornece as informações requeridas (por exemplo, detalhes do cartão de crédito, informações para transferência bancária).
+O sistema valida as informações de pagamento.
+Se o pagamento for bem-sucedido, o sistema notifica o cliente e gera uma confirmação de pagamento.
+O sistema atualiza o status do pedido para indicar que o pagamento foi recebido.
+O Departamento Financeiro (DPfinanceiro) é notificado do pagamento bem-sucedido.
+Fluxos Alternativos:
+
+Informações de Pagamento Inválidas (Passo 6):
+Se as informações de pagamento fornecidas pelo cliente forem inválidas, o sistema exibe uma mensagem de erro e solicita que o cliente corrija as informações.
+O fluxo retorna ao passo 5.
+Pós-condições:
+
+O pagamento do cliente é processado e confirmado com sucesso.
+O status do pedido é atualizado para refletir o pagamento recebido.
+
+Caso de Uso Expandido: Preencher ordem de pedido com tipo e quantidade de concreto (UC4)
+
+Ator(es): Cliente (c), Departamento de Vendas (DPVendas)
+
+Descrição:
+Este caso de uso descreve o processo do cliente especificar o tipo e a quantidade de concreto no seu pedido.
+
+Pré-condições:
+
+O cliente iniciou o processo de pedido.
+O cliente selecionou os produtos desejados.
+Fluxo Básico:
+
+O cliente acessa o formulário de pedido.
+O sistema apresenta as opções disponíveis para tipos de concreto e quantidades.
+O cliente seleciona o(s) tipo(s) de concreto desejado(s) e especifica a quantidade necessária para cada tipo.
+O sistema valida as opções e quantidades selecionadas.
+Se as seleções forem válidas, o sistema adiciona as informações de tipo(s) de concreto e quantidade ao pedido.
+O sistema atualiza o resumo do pedido com os detalhes do concreto.
+O sistema notifica o Departamento de Vendas (DPVendas) sobre as informações atualizadas do pedido.
+Fluxos Alternativos:
+
+Seleções Inválidas (Passo 4):
+Se o(s) tipo(s) de concreto selecionado(s) ou a quantidade for(em) inválido(s) (por exemplo, não está disponível, excede os limites de estoque), o sistema exibe uma mensagem de erro e solicita que o cliente faça seleções válidas.
+O fluxo retorna ao passo 3.
+Pós-condições:
+
+O formulário do pedido é preenchido com sucesso com o(s) tipo(s) de concreto e quantidade especificados.
+O resumo do pedido é atualizado para incluir os detalhes do concreto.
+O Departamento de Vendas (DPVendas) é notificado sobre as informações atualizadas do pedido.

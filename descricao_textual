@@ -1,0 +1,2 @@
+Um sistema que recebe a ordem de pedidos armazenando o tipo e a quantidade do produto (concreto) dos clientes e faz o encaminhamento do pedido para cada
+setor responsável, no fim registrando e efetuando o pagamento do cliente.
